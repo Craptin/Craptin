@@ -1,0 +1,74 @@
+<div class="forumlist_grid">
+<!-- BEGIN forumrow -->
+	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
+			</div><div style="clear: both;"></div>
+	<!-- ENDIF -->
+
+	<!-- EVENT forumlist_body_category_header_before -->
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+
+      <!-- EVENT forumlist_body_category_header_row_prepend -->
+      <h2><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></h2>
+      <!-- EVENT forumlist_body_category_header_row_append -->
+		<div class="grid_category_wrapper">	
+        
+	<!-- ENDIF -->
+	<!-- EVENT forumlist_body_category_header_after -->
+
+	<!-- IF not forumrow.S_IS_CAT -->
+		<!-- EVENT forumlist_body_forum_row_before -->
+        <div class="grid_solo_card_container">
+            <div class="grid_card">
+                <a href="{forumrow.U_VIEWFORUM}" class="grid_card_image forum_{forumrow.FORUM_ID}">
+                    <span class="grid_card_image_forum_name">{forumrow.FORUM_NAME}</span>
+                </a>
+                <style type="text/css">
+					.forum_{forumrow.FORUM_ID}.grid_card_image:before {
+						content: "";
+						position: absolute;
+						background-image: url('<!-- IF forumrow.FORUM_IMAGE -->{forumrow.FORUM_IMAGE_SRC}<!-- ELSE -->{T_THEME_PATH}/images/grid_placeholder.png<!-- ENDIF -->');
+						background-size: cover;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						transition: .2s ease-in-out;
+					}
+					
+					.forum_{forumrow.FORUM_ID}.grid_card_image:hover:before {
+						transform: scale(1.1);	
+					}
+				</style>
+                <div class="card_description">
+                    <!-- IF forumrow.FORUM_DESC -->{forumrow.FORUM_DESC}<!-- ENDIF -->            	
+                </div>
+                <div class="card_counters">
+                    <!-- IF forumrow.S_UNREAD_FORUM -->
+                        <span class="grid_unread_indicator"></span> <span class="grid_unread">{L_UNREAD}</span>
+                        &nbsp;&nbsp;
+                    <!-- ENDIF -->
+                	<!-- Subforum and moderator dropdowns here soon -->                              
+                    <!-- IF forumrow.CLICKS -->
+                        <strong>{forumrow.CLICKS}</strong> {L_REDIRECTS}
+                    <!-- ELSEIF not forumrow.S_IS_LINK -->
+                        <strong>{forumrow.TOPICS}</strong> {L_TOPICS} &nbsp; <strong>{forumrow.POSTS}</strong> {L_POSTS}
+                    <!-- ENDIF -->                                                                                              
+                </div>
+            </div>
+        </div>
+		<!-- EVENT forumlist_body_forum_row_after -->
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_LAST_ROW -->
+			</div><div style="clear: both;"></div>
+	<!-- EVENT forumlist_body_last_row_after -->
+	<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+	<div class="panel">
+		<div class="inner">
+		<strong>{L_NO_FORUMS}</strong>
+		</div>
+	</div>
+<!-- END forumrow -->
+</div>

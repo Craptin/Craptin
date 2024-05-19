@@ -1,0 +1,165 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_VOLARE_SIDEBARS_TITLE}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_VOLARE_SIDEBARS_SETTINGS}</legend>
+		<!-- Soon :) <dl>
+		    <dt><label for="vs_enable_collapse">{L_VS_ENABLE_COLLAPSE}{L_COLON}</label><br /><span>{L_VS_ENABLE_COLLAPSE_EXPLAIN}</span></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_collapse" value="1"<!-- IF S_VS_ENABLE_COLLAPSE --> id="vs_enable_collapse" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_collapse" value="0"<!-- IF not S_VS_ENABLE_COLLAPSE --> id="vs_enable_collapse" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl> -->
+		<!-- Not needed, as there's a big search in header <dl>
+		    <dt><label for="vs_enable_search_widget">{L_VS_ENABLE_SEARCH_WIDGET}{L_COLON}</label><br /><span>{L_VS_ENABLE_SEARCH_WIDGET_EXPLAIN}</span></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_search_widget" value="1"<!-- IF S_VS_ENABLE_SEARCH_WIDGET --> id="vs_enable_search_widget" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_search_widget" value="0"<!-- IF not S_VS_ENABLE_SEARCH_WIDGET --> id="vs_enable_search_widget" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl> -->
+		<dl>
+		    <dt><label for="vs_enable_profile_widget">{L_VS_ENABLE_PROFILE_WIDGET}{L_COLON}</label><br /><span>{L_VS_ENABLE_PROFILE_WIDGET_EXPLAIN}</span></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_profile_widget" value="1"<!-- IF S_VS_ENABLE_PROFILE_WIDGET --> id="vs_enable_profile_widget" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_profile_widget" value="0"<!-- IF not S_VS_ENABLE_PROFILE_WIDGET --> id="vs_enable_profile_widget" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_location">{L_VS_LOCATION}{L_COLON}</label><br /><span>{L_VS_LOCATION_EXPLAIN}</span></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_location" value="1"<!-- IF S_VS_LOCATION --> id="vs_location" checked="checked"<!-- ENDIF --> /> {L_VS_GLOBAL}</label>
+			<label><input type="radio" class="radio" name="vs_location" value="0"<!-- IF not S_VS_LOCATION --> id="vs_location" checked="checked"<!-- ENDIF --> /> {L_VS_INDEX_ONLY}</label></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_enable_social">{L_VS_ENABLE_SOCIAL}{L_COLON}</label><br /><span>{L_VS_ENABLE_SOCIAL_EXPLAIN}</span></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_social" value="1"<!-- IF S_VS_ENABLE_SOCIAL --> id="vs_enable_social" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_social" value="0"<!-- IF not S_VS_ENABLE_SOCIAL --> id="vs_enable_social" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+	</fieldset>
+<!-- 
+	<fieldset>
+		<legend>{L_VS_LEFTBAR}</legend>
+		<dl>
+		    <dt><label for="vs_enable_leftbar">{L_VS_ENABLE_LEFTBAR}{L_COLON}</label></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_leftbar" value="1"<!-- IF S_VS_ENABLE_LEFTBAR --> id="vs_enable_leftbar" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_leftbar" value="0"<!-- IF not S_VS_ENABLE_LEFTBAR --> id="vs_enable_leftbar" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_leftbar_width">{L_VS_BAR_WIDTH}{L_COLON}</label></dt>
+		    <dd><input type="number" id="vs_leftbar_width" name="vs_leftbar_width" value="{S_VS_LEFTBAR_WIDTH}" min="0" max="10000" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_leftbar_content">{L_VS_BAR_CONTENT}{L_COLON}</label><br /><span>{L_VS_BAR_CONTENT_EXPLAIN}</span></dt>
+		    <dd><textarea id="vs_leftbar_content" name="vs_leftbar_content" rows="20" cols="70">{S_VS_LEFTBAR_CONTENT}</textarea></dd>
+		</dl>
+	</fieldset>
+    -->
+    
+	<fieldset>
+		<legend>{L_VS_RIGHTBAR}</legend>
+		<dl>
+		    <dt><label for="vs_enable_rightbar">{L_VS_ENABLE_RIGHTBAR}{L_COLON}</label></dt>
+		    <dd><label><input type="radio" class="radio" name="vs_enable_rightbar" value="1"<!-- IF S_VS_ENABLE_RIGHTBAR --> id="vs_enable_rightbar" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="vs_enable_rightbar" value="0"<!-- IF not S_VS_ENABLE_RIGHTBAR --> id="vs_enable_rightbar" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_rightbar_width">{L_VS_BAR_WIDTH}{L_COLON}</label><br /><span>{L_VS_BAR_WIDTH_EXPLAIN}</span></dt>
+		    <dd><input type="number" id="vs_rightbar_width" name="vs_rightbar_width" value="{S_VS_RIGHTBAR_WIDTH}" min="0" max="10000" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_rightbar_content">{L_VS_BAR_CONTENT}{L_COLON}</label><br /><span>{L_VS_BAR_CONTENT_EXPLAIN}</span></dt>
+		    <dd><textarea id="vs_rightbar_content" name="vs_rightbar_content" rows="20" cols="70">{S_VS_RIGHTBAR_CONTENT}</textarea></dd>
+		</dl>
+	</fieldset>
+    
+	<fieldset>
+		<legend>{L_VS_SOCIAL_LINKS}</legend>
+		<p>{L_VS_SOCIAL_LINKS_EXPLAIN}</p>
+		<dl>
+		    <dt><label for="vs_social_behance">{L_VS_SOCIAL_BEHANCE}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_behance" name="vs_social_behance" value="{S_VS_SOCIAL_BEHANCE}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_discord">{L_VS_SOCIAL_DISCORD}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_discord" name="vs_social_discord" value="{S_VS_SOCIAL_DISCORD}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_dribble">{L_VS_SOCIAL_DRIBBLE}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_dribble" name="vs_social_dribble" value="{S_VS_SOCIAL_DRIBBLE}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_etsy">{L_VS_SOCIAL_ETSY}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_etsy" name="vs_social_etsy" value="{S_VS_SOCIAL_ETSY}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_facebook">{L_VS_SOCIAL_FACEBOOK}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_facebook" name="vs_social_facebook" value="{S_VS_SOCIAL_FACEBOOK}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_github">{L_VS_SOCIAL_GITHUB}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_github" name="vs_social_github" value="{S_VS_SOCIAL_GITHUB}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_googleplus">{L_VS_SOCIAL_GOOGLEPLUS}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_googleplus" name="vs_social_googleplus" value="{S_VS_SOCIAL_GOOGLEPLUS}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_instagram">{L_VS_SOCIAL_INSTAGRAM}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_instagram" name="vs_social_instagram" value="{S_VS_SOCIAL_INSTAGRAM}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_paypal">{L_VS_SOCIAL_PAYPAL}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_paypal" name="vs_social_paypal" value="{S_VS_SOCIAL_PAYPAL}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_pinterest">{L_VS_SOCIAL_PINTEREST}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_pinterest" name="vs_social_pinterest" value="{S_VS_SOCIAL_PINTEREST}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_reddit">{L_VS_SOCIAL_REDDIT}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_reddit" name="vs_social_reddit" value="{S_VS_SOCIAL_REDDIT}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_slack">{L_VS_SOCIAL_SLACK}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_slack" name="vs_social_slack" value="{S_VS_SOCIAL_SLACK}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_snapchat">{L_VS_SOCIAL_SNAPCHAT}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_snapchat" name="vs_social_snapchat" value="{S_VS_SOCIAL_SNAPCHAT}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_soundcloud">{L_VS_SOCIAL_SOUNDCLOUD}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_soundcloud" name="vs_social_soundcloud" value="{S_VS_SOCIAL_SOUNDCLOUD}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_steam">{L_VS_SOCIAL_STEAM}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_steam" name="vs_social_steam" value="{S_VS_SOCIAL_STEAM}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_tumblr">{L_VS_SOCIAL_TUMBLR}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_tumblr" name="vs_social_tumblr" value="{S_VS_SOCIAL_TUMBLR}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_twitch">{L_VS_SOCIAL_TWITCH}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_twitch" name="vs_social_twitch" value="{S_VS_SOCIAL_TWITCH}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_twitter">{L_VS_SOCIAL_TWITTER}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_twitter" name="vs_social_twitter" value="{S_VS_SOCIAL_TWITTER}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_vimeo">{L_VS_SOCIAL_VIMEO}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_vimeo" name="vs_social_vimeo" value="{S_VS_SOCIAL_VIMEO}" maxlength="255" size="60" /></dd>
+		</dl>
+		<dl>
+		    <dt><label for="vs_social_youtube">{L_VS_SOCIAL_YOUTUBE}{L_COLON}</label></dt>
+		    <dd><input type="text" id="vs_social_youtube" name="vs_social_youtube" value="{S_VS_SOCIAL_YOUTUBE}" maxlength="255" size="60" /></dd>
+		</dl>
+	</fieldset>
+    
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		{S_FORM_TOKEN}
+	</fieldset>
+
+</form>
+<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
+</script><script type="text/javascript">window.Beacon('init', '10185f86-9974-43da-867e-a0ef3d1024db')</script>
+<!-- INCLUDE overall_footer.html -->

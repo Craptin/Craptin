@@ -1,0 +1,198 @@
+/* Families */
+body {
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.codebox code {
+	font-family: Monaco, "Andale Mono","Courier New", Courier, monospace;
+}
+
+
+
+
+/* Sizes (Fixed) */
+html {font-size: 100%;}
+body {font-size: 13px;}
+
+
+.pagination li.page-jump a i {font-size: 21px;}
+.pagination li.active span {font-size: 13px;}
+.contact-icons.dropdown-contents {font-size: 0;}
+.post-buttons .button span {font-size: 0;}
+.pagination > ul > li {font-size: 100%;}
+.attachbox dl.thumbnail dd {font-size: 100%;}
+.pagination li.active span {font-size: 13px;}
+.badge {font-size: 10px;}
+div.inline-attachment p {font-size: 100%;}
+.attachbox {font-size: 13px;}
+.top {font-size: 12px;}
+
+
+
+/* Sizes (Relative) */
+
+/* 0.8em */
+fieldset.fields1 ul.recipients  input.button2{font-size: 0.8em;}
+.codebox p {font-size: 0.8em !important;}
+.notification_list p.notification-time {font-size: 0.8em;}
+
+/* 0.9em */
+.small {font-size: 0.9em !important;}
+.notification_list p.notifications_time {font-size: 0.9em !important;}
+
+/* 1em */
+table.table1 thead th {font-size: 1em;}
+.notification_list ul li p {font-size: 1em;}
+.error {font-size: 1em;}
+.content {font-size: 1em;}
+h3 {font-size: 1em;}
+.member-search strong {font-size: 1em;}
+.dropdown-extended ul li {font-size: 1em;}
+textarea {font-size: 1em;}
+.notice {font-size: 1em;}
+blockquote blockquote {font-size: 1em;}
+blockquote cite cite {font-size: 1em;}
+.codebox {font-size: 1em;}
+input.button1, input.button2 {font-size: 1em;}
+input {font-size: 1em;}
+select {font-size: 1em;}
+blockquote {font-size: 1em;}
+blockquote cite {font-size: 1em;}
+.codebox code {font-size: 1em;}
+.row .pagination li a, .row .pagination li span {font-size: 1em;}
+.message-box textarea {font-size: 1em;}
+
+/* 1.1em */
+p {font-size: 1.1em;}
+ul.linklist > li {font-size: 1.1em;}
+table.table1 td {font-size: 1.1em;}
+dl.details {font-size: 1.1em;}
+.phpbb_alert div.alert_text > p,
+.phpbb_alert div.alert_text > label,
+.phpbb_alert div.alert_text > select,
+.phpbb_alert div.alert_text > textarea,
+.phpbb_alert div.alert_text > input {font-size: 1.1em;}
+div.rules {font-size: 1.1em;}
+.dropdown-extended .footer {font-size: 1.1em;}
+ul.topiclist dt {font-size: 1.1em;}
+dd.lastpost, dd.redirect, dd.moderation, dd.time, dd.info {font-size: 1.1em;}
+dd.option {font-size: 1.1em;}
+.postbody .ignore {font-size: 1.1em;}
+dl.faq {font-size: 1.1em;}
+.signature {font-size: 1.1em;}
+.panel-container .postbody p.author {font-size: 1.1em;}
+.panel-container .panel p {font-size: 1.1em;}
+.panel-container .panel ol {font-size: 1.1em;}
+fieldset {font-size: 1.1em;}
+.tabs .dropdown, .minitabs .dropdown {font-size: 1.1em;}
+.button {font-size: 1.1em;}
+.tabs .tab, .minitabs .tab {font-size: 1.1em;}
+.panel p {font-size: 1.1em;}
+.dropdown li {font-size: 1.1em;}
+.dropdown fieldset.display-options {font-size: 1.1em;}
+.profileWidget fieldset.quick-login input.inputbox {font-size: 1.1em;}
+.sidebar_right h4 {font-size: 1.1em !important;}
+.postbody .content {font-size: 1.1em;}
+p.author {font-size: 1.1em;}
+.forumlist_grid .card_counters {font-size: 1.1em;}
+
+
+/* 1.2em */
+.post-buttons .dropdown a {font-size: 1.2em;}
+.notification_list p.notifications_title {font-size: 1.2em !important;}
+dd.posts, dd.topics, dd.views, dd.extra, dd.mark {font-size: 1.2em;}
+.content p {font-size: 1.2em;}
+.content dl.faq {font-size: 1.2em;}
+.vote-submitted {font-size: 1.2em;}
+a.forumtitle {font-size: 1.2em;}
+a.topictitle {font-size: 1.2em;}
+li.header dt, li.header dd {font-size: 1.2em;}
+h3 {font-size: 1.2em;}
+.content h2, .panel h2 {font-size: 1.2em;}
+.sidebarMenu {font-size: 1.2em;}
+.postbody h3 {font-size: 1.2em;}
+.forumlist_grid .card_description {font-size: 1.2em;}
+
+/* 1.3em */
+h4 {font-size: 1.3em;}
+input.control_bar_search {font-size: 1.3em;}
+
+/* 1.5em */
+.forumlist_grid h2 {font-size: 1.5em;}
+
+
+/* 1.6em */
+.responsive-tab > a.responsive-tab-link {font-size: 1.6em;}
+.forumlist_grid .grid_card_image_forum_name {font-size: 1.6em;}
+
+
+/* 2em */
+h1 {font-size: 2em;}
+h2 {font-size: 2em;}
+
+
+/* Weights (Normal) */
+table.table1 thead th {font-weight: normal;}
+table.info tbody th {font-weight: normal;}
+.pagination li.active span {font-weight: normal;}
+.pagination li.active span {font-weight: normal;}
+.dropdown-extended .header .header_settings {font-weight: normal;}
+blockquote cite > div {font-weight: normal;}
+.attachbox p {font-weight: normal;}
+.attachbox p.stats {font-weight: normal;}
+.postprofile strong {font-weight: normal;}
+.postprofile .profile-posts a {font-weight: normal;}
+.tabs .dropdown, .minitabs .dropdown {font-weight: normal;}
+.search .postprofile a {font-weight: normal;}
+input.disabled {font-weight: normal;}
+input {font-weight: normal;}
+select {font-weight: normal;}
+h2 {font-weight: normal;}
+.welcome_message h1 {font-weight: normal;}
+
+/* Weights (300) */
+.forumlist_grid .grid_card_image_forum_name {font-weight: 300;}
+.forumlist_grid .card_description {font-weight: 300;}
+
+/* Weights (500) */
+li.header dt {font-weight: 500;}
+h3 {font-weight: 500;}
+.specialbutton {font-weight: 500;}
+.tabs .tab, .minitabs .tab {font-weight: 500;}
+.dropdown-contents a {font-weight: 500;}
+.content h2, .panel h2 {font-weight: 500;}
+.button2 {font-weight: 500;}
+li.row strong {font-weight: 500;}
+a.subforum {font-weight: 500;}
+.forumlist_grid .grid_unread {font-weight: 500;}
+.welcome_message a.button1 {font-weight: 500;}
+
+/* Weights (Bold) */
+h1 {font-weight: bold;}
+b, strong {font-weight: bold;}
+.text-strong {font-weight: bold;}
+.breadcrumbs .crumb {font-weight: bold;}
+.breadcrumbs .crumb:before {font-weight: bold;}
+.dropdown-extended .header {font-weight: bold;}
+.error {font-weight: bold;}
+fieldset.polls dl.voted {font-weight: bold;}
+dd.profile-warnings {font-weight: bold;}
+.dl_links strong {font-weight: bold;}
+.panel-container table.table1 thead th {font-weight: bold;}
+a.lastsubject {font-weight: bold;}
+.postprofile a, .postprofile dt.author a {font-weight: bold;}
+.notification_list p.notifications_title strong {font-weight: bold;}
+fieldset.polls dd div {font-weight: bold;}
+dl.faq dt {font-weight: bold;}
+blockquote cite {font-weight: bold;}
+.codebox p {font-weight: bold;}
+dl.file dt {font-weight: bold;}
+.navigation li {font-weight: bold;}
+dl.mini dt {font-weight: bold;}
+.friend-online {font-weight: bold;}
+dt label {font-weight: bold;}
+a.button1, input.button1 {font-weight: bold;}
+.username-coloured {font-weight: bold;}
+.jumpbox-cat-link, .jumpbox-forum-link { font-weight: bold; }
+a.forumtitle {font-weight: bold;}
+a.topictitle {font-weight: bold;}

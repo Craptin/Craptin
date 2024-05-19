@@ -1,0 +1,31 @@
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			prosilver (the default phpBB 3.3.x style)
+	Based on style:
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		phpBB Limited ( https://www.phpbb.com/ )
+    --------------------------------------------------------------
+*/
+
+@import url("normalize.css?v=volare115");
+@import url("base.css?v=volare115");
+@import url("utilities.css?v=volare115");
+@import url("common.css?v=volare115");
+@import url("links.css?v=volare115");
+@import url("content.css?v=volare115");
+@import url("buttons.css?v=volare115");
+@import url("cp.css?v=volare115");
+@import url("forms.css?v=volare115");
+@import url("icons.css?v=volare115");
+@import url("colours.css?v=volare115");
+@import url("fonts.css?v=volare115");
+@import url("volare.css?v=volare115");
+@import url("elements.css?v=volare115");
+
+/* Responsive */
+@import url("responsive/responsive.css?v=volare115");
+@import url("responsive/xs-phones.css?v=volare115");
+@import url("responsive/small-smaller-tablets.css?v=volare115");
+@import url("responsive/medium-ipad.css?v=volare115");
+@import url("responsive/large-desktops.css?v=volare115");
+@import url("responsive/squishy.css?v=volare115");

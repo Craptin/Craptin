@@ -1,0 +1,10 @@
+services:
+    planetstyles.volare.listener:
+        class: planetstyles\volare\event\listener
+        arguments:
+            - '@cache.driver'
+            - '@config'
+            - '@config_text'
+            - '@template'
+        tags:
+            - { name: event.listener }

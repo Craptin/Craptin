@@ -1,0 +1,150 @@
+{
+
+"Set Base Colour": {
+	"name": "base_colour",
+	"type": "list",
+	"help": "Sets the theme base colour.<br />Default value: 'Indigo'.",
+	"values": [
+		"Amber",
+		"Black",
+		"Blue",
+		"Blue_Grey",
+		"Brown",
+		"Cyan",
+		"Deep_Orange",
+		"Deep_Purple",
+		"Green",
+		"Grey",
+		"Indigo",
+		"Light_Blue",
+		"Light_Green",
+		"Lime",
+		"Orange",
+		"Pink",
+		"Purple",
+		"Red",																																		
+		"Teal"															
+	]
+},
+
+"Allow end-users to select own colour scheme?": {
+	"name": "colour_switcher",
+	"type": "bool",
+	"help": "Allows your users to pick their own base colour from those enabled below.<br />Default value: No."			
+},
+
+
+
+
+
+"Forum Layout": {
+	"name": "forum_layout",
+	"type": "list",
+	"help": "Sets the front-page display of categories and forums.  <br />Default value: 'List'.",
+	"values": [
+		"List",
+		"Grid"															
+	]
+},
+
+"Disable Animations?": {
+	"name": "disable_css_animations",
+	"type": "bool",
+	"help": "Disables animated features (eg: Fading / Shifting content blocks).<br />Default value: No."			
+},	
+
+"Enable Sticky Header?": {
+	"name": "sticky_header",
+	"type": "bool",
+	"help": "When the page is scrolled down, the header will remain visible<br />Default value: No."			
+},
+
+"Enable guest welcome message?": {
+	"name": "welcome_message",
+	"type": "bool",
+	"help": "Shows a welcome / sign-up message to guests on all pages.<br />Default value: No."			
+},
+
+"Guest welcome background repeat": {
+	"name": "guest_background_repeat",
+	"help": "Background repeat option for the guest welcome message<br />Default setting: no-repeat.",		
+	"type": "list",
+	"values": [
+		"repeat-x",
+		"repeat-y",
+		"no-repeat"
+	]
+},
+
+"Guest welcome background position": {
+	"name": "guest_background_position",
+	"help": "Background position option for the guest welcome message<br />Default setting: center center.",		
+	"type": "list",
+	"values": [
+		"left top",
+		"left center",
+		"left bottom",
+		"center top",
+		"center center",
+		"center bottom",
+		"right top",
+		"right center",
+		"right bottom"
+	]
+},
+
+"Stretch guest welcome background to fill space?": {
+	"name": "guest_background_cover",
+	"type": "bool",
+	"help": "Stretches the guest welcome background image to best fit. Recommended for large images that don't repeat. Overrides the background repeat setting."			
+},	
+
+"Guest welcome background opacity": {
+	"name": "guest_background_opacity",
+	"help": "Sets the transparency for the guest welcome background image. Lower number = more transparent. <br />Default setting: 1.",		
+	"type": "list",
+	"values": [
+		"0.1",
+		"0.2",
+		"0.3",
+		"0.4",
+		"0.5",
+		"0.6",
+		"0.7",
+		"0.8",
+		"0.9",
+		"1"
+	]
+},
+
+
+"Postprofile Side": {
+	"name": "postprofile_side",
+	"help": "Sets which side avatars / post counts display on when reading a topic.<br />Default setting: Right.",		
+	"type": "list",
+	"values": [
+		"Left",
+		"Right"
+	]
+},
+
+"Show 'joined' date on post profiles?": {
+	"name": "join_date",
+	"type": "bool",
+	"help": "When enabled, the user's 'joined' date will be visible next to posts and private messages.<br />Default Value: No"
+},
+
+"Show topic creation date/time on viewforum and search results?": {
+	"name": "topic_date",
+	"type": "bool",
+	"help": "Default Value: No"
+},
+
+
+"Hide PlanetStyles link in footer?": {
+	"name": "credit_line",
+	"type": "bool",
+	"help": "We'd rather you didn't, but it's OK if you really want to :("
+}	
+
+}

@@ -1,0 +1,36 @@
+@media (min-width: 992px)and (max-width: 1199px) {
+	
+	body{ border-top-color: #0F9;}
+		
+	/* Hide last login */
+	p.time.rightside {
+		display: none;	
+	}
+
+	
+	/* Remove table display from control bar and cells */
+	.sidebarRight .control_bar_flex_container {
+		display: inline-block;
+
+	}
+
+	/* Hide the desktop logo and search */
+	.sidebarRight .logo_desktop {
+		display: none;
+	}
+	/* Show mobile logo  */
+	.sidebarRight .logo_mobile {
+		display: block;
+		text-align: center;
+	}
+	/* Reduce right links margin */
+	.sidebarRight ul.linklist > li {
+		margin-right: 5px;	
+	}
+	.sidebarRight ul.linklist > li.rightside	 {
+		margin-left: 5px;
+	}	
+	
+
+	
+}

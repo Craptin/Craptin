@@ -1,0 +1,46 @@
+.volare-wrapper, .volare fieldset {
+	background-color: #FFFFFF;
+	padding: 30px;
+	border: none;
+}
+
+.volare * {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+.volare fieldset {
+	margin-bottom: 30px;
+}
+
+.volare fieldset dl {
+	margin-bottom: 20px;	
+}
+
+.volare fieldset dd {
+	padding-left: 20px;
+	border-left: none;
+}
+
+.volare fieldset dt,.volare fieldset dt:hover {
+	border-right-color: #E3EBEF !important;
+}
+
+.volare fieldset legend, .volare fieldset dt label {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.volare fieldset input[type=text], .volare fieldset input[type=file], .volare fieldset input[type=number], .volare fieldset textarea {
+	background-color: #E3EBEF;
+	border: none;
+	padding: 5px;
+}
+
+.volare textarea {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.volare .purgewarning {
+	display: none;	
+}

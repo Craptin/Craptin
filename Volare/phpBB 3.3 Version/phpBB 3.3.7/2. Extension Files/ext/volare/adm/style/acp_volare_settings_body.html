@@ -1,0 +1,102 @@
+{% include 'overall_header.html' %}
+<div class="volare">
+<div class="volare-wrapper">
+	<img src="{ROOT_PATH}/ext/planetstyles/volare/adm/style/acp_logo.png" />
+	<br /><br /><p>Volare Theme Control Panel.</p>
+	<!-- <div class="ps_docs_button">
+		<a href="https://docs.planetstyles.net/" target="_blank">Documention home</a>
+		<a href="https://docs.planetstyles.net/category/19-volare" target="_blank">Volare: Feature guides</a>
+		<a href="https://themeforest.net/item/volare-material-design-phpbb-32-theme-responsive/21578782/support" target="_blank">Volare: Theme Support</a>
+	</div> -->
+</div>
+
+<div class="errorbox purgewarning">
+<p><strong>Important:</strong> Purge Cache in: "ACP &rarr; General &raquo; Purge Cache &rarr; Run Now" to remove this message and enable the VOLARE Control Panel.</p>
+</div>
+
+<form id="acp_board" method="post" action="{{ U_ACTION }}" enctype="multipart/form-data">
+
+	<fieldset>
+		<legend>{{ lang('VOLARE_SETTINGS_LOGO') }}</legend>
+		<p>{{ lang('VOLARE_SETTINGS_LOGO_EXPLAIN') }}</p>
+		<dl>
+			<dt><label for="volare_settings_logo_upload">{{ lang('VOLARE_SETTINGS_LOGO_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_LOGO_UPLOAD_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="volare_settings_logo_upload" id="volare_settings_logo_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="volare_settings_logo_path">{{ lang('VOLARE_SETTINGS_LOGO_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_LOGO_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="volare_settings_logo_path" name="volare_settings_logo_path" value="{{ VOLARE_SETTINGS_LOGO_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>
+		<!-- <dl>
+			<dt><label for="volare_settings_logo_width">{{ lang('VOLARE_SETTINGS_LOGO_WIDTH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_LOGO_WIDTH_EXPLAIN') }}</span></dt>
+			<dd><input type="number" id="volare_settings_logo_width" name="volare_settings_logo_width" value="{{ VOLARE_SETTINGS_LOGO_WIDTH }}" size="3" maxlength="3" min="0" /> {{ lang('PIXEL') }}</dd>
+		</dl>
+		<dl>
+			<dt><label for="volare_settings_logo_height">{{ lang('VOLARE_SETTINGS_LOGO_HEIGHT') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_LOGO_HEIGHT_EXPLAIN') }}</span></dt>
+			<dd><input type="number" id="volare_settings_logo_height" name="volare_settings_logo_height" value="{{ VOLARE_SETTINGS_LOGO_HEIGHT }}" size="3" maxlength="3" min="0" max="999" /> {{ lang('PIXEL') }}</dd>
+		</dl> -->
+        <hr />
+		<dl>
+			<dt><label for="volare_settings_header_upload">{{ lang('VOLARE_SETTINGS_FAVICON_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_FAVICON_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="volare_settings_favicon_upload" id="volare_settings_favicon_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="volare_settings_favicon_path">{{ lang('VOLARE_SETTINGS_FAVICON_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_FAVICON_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="volare_settings_favicon_path" name="volare_settings_favicon_path" value="{{ VOLARE_SETTINGS_FAVICON_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>
+        <hr />        
+		<dl>
+			<dt><label for="volare_settings_header_upload">{{ lang('VOLARE_SETTINGS_HEADER_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_HEADER_UPLOAD_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="volare_settings_header_upload" id="volare_settings_header_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="volare_settings_header_path">{{ lang('VOLARE_SETTINGS_HEADER_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('VOLARE_SETTINGS_HEADER_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="volare_settings_header_path" name="volare_settings_header_path" value="{{ VOLARE_SETTINGS_HEADER_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>                
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('VOLARE_SETTINGS_CONFIG') }}</legend>
+		{% for volare_settings_config in loops.volare_settings_config %}
+			<dl>
+				<dt><label for="{{ volare_settings_config.CONFIG_NAME }}">{{ volare_settings_config.LABEL }}{{ lang('COLON') }}</label><br /><span>{{ volare_settings_config.LABEL_HELP }}</span>
+                <!-- <br /><span>{{ volare_settings_config.LABEL_EXPLAIN }}</span></dt> -->
+				<dd>
+					{% if volare_settings_config.S_BOOL %}
+						<label><input type="radio" class="radio" id="{{ volare_settings_config.CONFIG_NAME }}" name="{{ volare_settings_config.CONFIG_NAME }}" value="1"{% if volare_settings_config.VALUE %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+						<label><input type="radio" class="radio" name="{{ volare_settings_config.CONFIG_NAME }}" value="0"{% if not volare_settings_config.VALUE %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+					{% elseif volare_settings_config.S_LIST %}
+						{% for OPTION in volare_settings_config.OPTIONS %}
+							<label><input type="radio" class="radio" {% if loop.first %}id="{{ volare_settings_config.CONFIG_NAME }}" {% endif %}name="{{ volare_settings_config.CONFIG_NAME }}" value="{{ OPTION }}"{% if volare_settings_config.VALUE === OPTION %} checked="checked"{% endif %} /> {{ OPTION }}</label>
+						{% endfor %}
+					{% elseif volare_settings_config.S_STRING %}
+						<input type="text" id="{{ volare_settings_config.CONFIG_NAME }}" name="{{ volare_settings_config.CONFIG_NAME }}" value="{{ volare_settings_config.VALUE }}" size="40" maxlength="255" />
+					{% endif %}
+				</dd>
+			</dl>
+		{% endfor %}
+	</fieldset>
+
+<!-- 
+	<fieldset>
+    <p>Refer to documentation for corresponding output locations.</p>
+		<legend>{{ lang('VOLARE_SETTINGS_HTML_CODE') }}</legend>
+		{% for volare_settings_html in loops.volare_settings_html %}
+			<dl>
+				<dt><label for="{{ volare_settings_html.NAME }}">{{ volare_settings_html.LABEL }}</label><br /><span>Refer to documentation for output location.  {{ volare_settings_html.LABEL_EXPLAIN }} </span></dt>
+				<dd><textarea id="{{ volare_settings_html.NAME }}" name="{{ volare_settings_html.NAME }}" rows="10" cols="500" >{{ volare_settings_html.VALUE }}</textarea></dd>
+			</dl>
+		{% endfor %}
+	</fieldset> -->
+
+	<fieldset>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		</p>
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+</form>
+</div>
+<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
+</script><script type="text/javascript">window.Beacon('init', '10185f86-9974-43da-867e-a0ef3d1024db')</script>
+{% include 'overall_footer.html' %}

@@ -1,0 +1,23 @@
+{
+    "name": "planetstyles/volare",
+    "type": "phpbb-extension",
+    "description": "Control Panel for PlanetStyles Themes",
+	"homepage": "http://www.planetstyles.net",
+    "version": "1.0.0",
+    "license": "Private use only",
+    "authors": [
+        {
+            "name": "PlanetStyles",
+	    "homepage": "http://www.planetstyles.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "extra": {
+        "display-name": "Volare Theme: Control Panel",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0"
+        }
+    }
+}

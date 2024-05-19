@@ -1,0 +1,46 @@
+@media (max-width: 767px) {
+	
+	body{ border-top-color: #FF0000;}
+	
+	/* Move the sidebar below content */
+	.main_content {
+		width: 100%;
+		margin: 0;
+		display: block;
+	}
+	.sidebar_right {
+		display: block;
+		margin: 0;
+		width: 100% !important;
+		border-top: 1px solid rgba(255,255,255,0.2); /* Add border top */
+		text-align: center;
+	}
+	
+	/* Remove table display from control bar and cells */
+	.control_bar_flex_container {
+		display: inline-block;
+		padding: 0;
+	}
+	.control_bar_left, .control_bar_middle, .control_bar_right {
+		display: block;
+	}
+	/* Hide the desktop logo and search */
+	.logo_desktop, .control_bar_middle {
+		display: none;
+	}
+	/* Show mobile logo  */
+	.logo_mobile {
+		display: block;
+		text-align: center;
+	}
+	/* Reduce right links margin */
+	ul.linklist > li {
+		margin-right: 5px;	
+	}
+	ul.linklist > li.rightside	 {
+		margin-left: 5px;
+	}
+
+
+	
+}

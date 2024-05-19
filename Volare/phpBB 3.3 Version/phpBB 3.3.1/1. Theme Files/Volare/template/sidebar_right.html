@@ -1,0 +1,103 @@
+<div class="sidebar_right sidebar_desktop" style="width: <!-- IF S_VS_RIGHTBAR_WIDTH -->{S_VS_RIGHTBAR_WIDTH}<!-- ELSE -->300<!-- ENDIF -->px;">
+    
+    
+        <!-- IF S_VS_ENABLE_PROFILE_WIDGET -->
+            <div class="sidebarWidget profileWidget">
+            
+            <h4>
+                <!-- IF S_USER_LOGGED_IN -->
+                    {L_READ_PROFILE}
+                <!-- ELSE -->
+                    <a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>
+                    <!-- IF S_REGISTER_ENABLED -->&bull; <a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->
+                <!-- ENDIF -->            
+            </h4>
+            <!-- IF S_USER_LOGGED_IN -->
+            <ul class="sidebarMenu">
+                <li>
+                    <a href="{U_PROFILE}" title="{L_PROFILE}">
+                        <i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}">
+                        <i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{L_READ_PROFILE}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}">
+                        <i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <!-- IF S_DISPLAY_SEARCH -->
+                <li>
+                    <a href="{U_SEARCH_SELF}">
+                        <i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>{L_SEARCH_SELF}</span>
+                    </a>
+                </li>  
+                <!-- ENDIF -->
+                <!-- IF S_NOTIFICATIONS_DISPLAY -->
+                <li>
+                    <a href="{U_VIEW_ALL_NOTIFICATIONS}">
+                        <i class="icon fa-bell fa-fw" aria-hidden="true"></i><span>{L_NOTIFICATIONS}</span>
+                        <strong class="badge<!-- IF not NOTIFICATIONS_COUNT --> hidden<!-- ENDIF -->">{NOTIFICATIONS_COUNT}</strong>
+                    </a>
+                </li>                    	
+                <!-- ENDIF -->
+                <!-- IF S_DISPLAY_PM -->
+                <li>
+                    <a href="{U_PRIVATEMSGS}">
+                        <i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>{L_PRIVATE_MESSAGES}</span>
+                        <strong class="badge<!-- IF not PRIVATE_MESSAGE_COUNT --> hidden<!-- ENDIF -->">{PRIVATE_MESSAGE_COUNT}</strong>
+                    </a>
+                </li>
+                <!-- ENDIF -->
+                <li>
+                    <a href="ucp.php?i=ucp_main&amp;mode=bookmarks">
+                        <i class="icon fa-bookmark fa-fw" aria-hidden="true"></i>{L_VIEW_BOOKMARKS}
+                    </a>
+                </li>                       
+                
+            </ul>
+            <!-- ELSE -->
+			<!-- IF not S_IS_BOT -->
+
+            <form method="post" action="{S_LOGIN_ACTION}">
+                <fieldset class="quick-login">
+                    <input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" placeholder="{L_USERNAME}" /></label>
+                    <input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" autocomplete="off" placeholder="Password" /></label>
+                    <!-- IF S_AUTOLOGIN_ENABLED -->
+                        <label for="autologin2"><input type="checkbox" name="autologin" id="autologin2" /> {L_LOG_ME_IN}</label>
+                    <!-- ENDIF -->
+                    <input type="submit" name="login" value="{L_LOGIN}" class="button2" />
+                    <!-- IF U_SEND_PASSWORD -->
+                        <a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+                    <!-- ENDIF -->
+                    <!-- IF S_REGISTER_ENABLED --><br /><br /><a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->                                                    
+                    {S_LOGIN_REDIRECT}
+                </fieldset>      
+                                                                         
+            </form>                                                												
+			<!-- ENDIF -->                       	
+		
+
+            
+            <!-- ENDIF -->
+
+            </div>
+        <!-- ENDIF --> 
+    
+    	
+		{S_VS_RIGHTBAR_CONTENT}
+        
+        
+        <!-- IF S_VS_ENABLE_SOCIAL -->
+        	<div class="sidebarWidget sidebarSocial">
+                <!-- IF S_VS_SOCIAL_BEHANCE --><a title="{L_VS_SOCIAL_BEHANCE}" href="{S_VS_SOCIAL_BEHANCE}" class="sbehance"><i class="fa fa-behance"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_DISCORD --><a title="{L_VS_SOCIAL_DISCORD}" href="{S_VS_SOCIAL_DISCORD}" class="sdiscord"><img src="{T_THEME_PATH}/images/discord.png" width="24" style="margin-top: -6px;" /></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_DRIBBLE --><a title="{L_VS_SOCIAL_DRIBBLE}" href="{S_VS_SOCIAL_DRIBBLE}" class="sdribbble"><i class="fa fa-dribbble"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_ETSY --><a title="{L_VS_SOCIAL_ETSY}" href="{S_VS_SOCIAL_ETSY}" class="setsy"><i class="fa fa-etsy"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_FACEBOOK --><a title="{L_VS_SOCIAL_FACEBOOK}" href="{S_VS_SOCIAL_FACEBOOK}" class="sfacebook"><i class="fa fa-facebook-f"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_GITHUB --><a title="{L_VS_SOCIAL_GITHUB}" href="{S_VS_SOCIAL_GITHUB}" class="sgithub"><i class="fa fa-github-alt"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_GOOGLEPLUS --><a title="{L_VS_SOCIAL_GOOGLEPLUS}" href="{S_VS_SOCIAL_GOOGLEPLUS}" class="sgoogleplus"><i class="fa fa-google-plus"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_INSTAGRAM --><a title="{L_VS_SOCIAL_INSTAGRAM}" href="{S_VS_SOCIAL_INSTAGRAM}" class="sinstagram"><i class="fa fa-instagram"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_PAYPAL --><a title="{L_VS_SOCIAL_PAYPAL}" href="{S_VS_SOCIAL_PAYPAL}" class="spaypal"><i class="fa fa-paypal"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_PINTEREST --><a title="{L_VS_SOCIAL_PINTEREST}" href="{S_VS_SOCIAL_PINTEREST}" class="spinterest"><i class="fa fa-pinterest"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_REDDIT --><a title="{L_VS_SOCIAL_REDDIT}" href="{S_VS_SOCIAL_REDDIT}" class="sreddit"><i class="fa fa-reddit-alien"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_SLACK --><a title="{L_VS_SOCIAL_SLACK}" href="{S_VS_SOCIAL_SLACK}" class="sslack"><i class="fa fa-slack"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_SNAPCHAT --><a title="{L_VS_SOCIAL_SNAPCHAT}" href="{S_VS_SOCIAL_SNAPCHAT}" class="ssnapchat"><i class="fa fa-snapchat-ghost"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_SOUNDCLOUD --><a title="{L_VS_SOCIAL_SOUNDCLOUD}" href="{S_VS_SOCIAL_SOUNDCLOUD}" class="ssoundcloud"><i class="fa fa-soundcloud"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_STEAM --><a title="{L_VS_SOCIAL_STEAM}" href="{S_VS_SOCIAL_STEAM}" class="ssteam"><i class="fa fa-steam"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_TUMBLR --><a title="{L_VS_SOCIAL_TUMBLR}" href="{S_VS_SOCIAL_TUMBLR}" class="stumblr"><i class="fa fa-tumblr"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_TWITCH --><a title="{L_VS_SOCIAL_TWITCH}" href="{S_VS_SOCIAL_TWITCH}" class="stwitch"><i class="fa fa-twitch"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_TWITTER --><a title="{L_VS_SOCIAL_TWITTER}" href="{S_VS_SOCIAL_TWITTER}" class="stwitter"><i class="fa fa-twitter"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_VIMEO --><a title="{L_VS_SOCIAL_VIMEO}" href="{S_VS_SOCIAL_VIMEO}" class="svimeo"><i class="fa fa-vimeo"></i></a><!-- ENDIF --><!-- IF S_VS_SOCIAL_YOUTUBE --><a title="{L_VS_SOCIAL_YOUTUBE}" href="{S_VS_SOCIAL_YOUTUBE}" class="syoutube"><i class="fa fa-youtube"></i></a><!-- ENDIF -->
+            </div>	
+        <!-- ENDIF -->
+        
+        <div id="sidebarStickyDetector"></div>
+             
+	</div><!-- /sidebar_right -->

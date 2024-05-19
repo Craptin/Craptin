@@ -1,0 +1,9 @@
+services:
+    planetstyles.volaresidebars.listener:
+        class: planetstyles\volaresidebars\event\main_listener
+        arguments:
+            - '@config'
+            - '@config_text'
+            - '@template'
+        tags:
+            - { name: event.listener }

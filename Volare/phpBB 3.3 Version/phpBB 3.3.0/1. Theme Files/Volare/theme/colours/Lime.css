@@ -1,0 +1,48 @@
+/*  #CDDE20 (205,222,32)  */
+
+/* Background Colour */
+.control_bar, .specialbutton, .page-footer, .sidebar_right, a.button1, input.button1, input.button3, a.button2, input.button2, .pagination li.active span, .pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger, a.subforum i.subforum_unread, .global_unread:before, .global_unread_mine:before, .global_unread_locked:before, .global_unread_locked_mine:before, .announce_unread:before, .announce_unread_mine:before, .announce_unread_locked:before, .announce_unread_locked_mine:before, .forum_unread:before, .forum_unread_locked:before, .forum_unread_subforum:before, .sticky_unread:before, .sticky_unread_mine:before, .sticky_unread_locked:before, .sticky_unread_locked_mine:before, .pm_unread:before, .topic_unread:before, .topic_unread_mine:before, .topic_unread_hot:before, .topic_unread_hot_mine:before, .topic_unread_locked:before, .topic_unread_locked_mine:before, .form-element-bar::after, .forumlist_grid .grid_unread_indicator, .welcome_message {
+	background-color: #CDDE20 !important;	
+}
+
+/* Border Color */
+.tabs .activetab > a, .tabs .activetab > a:hover, blockquote, .codebox code, .pagination li.active span, .pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger, a.postlink {
+	border-color: #CDDE20;
+}
+
+/* Color */
+.codebox code, .navigation .active-subsection a, .topics .row-item:after, .pmlist .row-item:after, .cplist .row-item:after, a.postlink, .form-element-field:focus~.form-element-label, .forumlist_grid .grid_unread, .forumlist_grid .grid_unread_indicator {
+	color: #CDDE20;
+}
+
+
+/* Box shadow for unread pulse icons */
+@-webkit-keyframes UnreadPulse {
+	0% {
+	  -webkit-box-shadow: 0 0 0 0 rgba(205,222,32,0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 8px rgba(205,222,32,0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(205,222,32,0);
+	}
+}
+@keyframes UnreadPulse {
+	0% {
+	  -moz-box-shadow: 0 0 0 0 rgba(205,222,32,0.4);
+	  box-shadow: 0 0 0 0 rgba(205,222,32,0.4);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 8px rgba(205,222,32,0);
+		box-shadow: 0 0 0 8px rgba(205,222,32, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(205,222,32,0);
+		box-shadow: 0 0 0 0 rgba(205,222,32,0);
+	}
+}
+
+.sidebar_right, #page-footer, .control_bar_flex_container {
+	text-shadow: 1px 1px 1px rgba(0,0,0,.1);	
+}
