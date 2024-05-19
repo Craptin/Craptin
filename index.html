@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vize not hesaplama</title>
+</head>
+<body>
+    <h2>Öğrenci not hesaplama</h2>
+    <label for="vize">Vize Notu :</label>
+    <input type="number" id="vize" name="vize"><br><br>
+    <label for="final">Final Notu :</label>
+    <input type="number" id="final" name="final"><br><br>
+    <button onclick="hesapla()">Hesapla</button>
+
+    <p id="sonuc"></p>
+
+    <script>
+        function hesapla() {
+            var vize = parseFloat(document.getElementById("vize").value);
+            var final = parseFloat(document.getElementById("final").value);
+
+            if (isNaN(vize) || isNaN(final)) {
+                document.getElementById("sonuc").innerText = "geçerli bir not gir .";
+                return;
+            }
+
+            var ortalama = (vize * 0.40) + (final * 0.60);
+
+            var gectiMi;
+            if (vize < 50) {
+                gectiMi = "Kaldı (vize notu 50 altında)";
+            } else if (final < 50) {
+                gectiMi = "Kaldı (final notu 50 altında)";
+            } else if (ortalama >= 50) {
+                gectiMi = "geçtin kanka";
+            } else {
+                gectiMi = "kaldı";
+            }
+
+            document.getElementById("sonuc").innerText = "Ortalama: " + ortalama.toFixed(2) + " - " + gectiMi;
+        }
+    </script>
+</body>
+</html>
